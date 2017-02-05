@@ -1,0 +1,278 @@
+ /*
+
+COULEURS
+
+Bleu foncé
+#3454D1
+
+Bleu clair
+#C5CAFF
+
+Beige
+#C9B55D
+
+Blanc
+#EFEFEF
+
+Noir
+#0C090D
+
+*/
+
+/* MENU */
+nav {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+nav.reduced {
+    height: 10vh;
+}
+
+nav * {
+    color: #efefef;
+}
+
+nav a {
+    position: relative;
+    color: #efefef;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #efefef;
+}
+
+nav a hr {
+    background: #efefef;
+}
+
+nav span {
+    font-family: 'Work Sans', sans-serif;
+}
+
+nav svg {
+    max-width: 25vw; 
+}
+
+nav.reduced a, nav.reduced p {
+    margin: 2.5vh;
+}
+
+nav .no-hr {
+    margin-top: 0 !important;
+}
+
+nav p {
+    font-family: 'Work Sans', 'Work Sans', Helvetica, Arial, sans-serif;
+    color: #ff3838;
+}
+
+nav span:hover {
+    animation: cross-rotate 1s;
+    cursor: pointer;
+}
+
+@keyframes cross-rotate {
+    
+    0% {
+        transform: rotate(0deg);
+        transform-origin: bottom;
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+nav:not(.reduced) p {
+    color: #efefef;
+}
+
+nav.reduce-img svg {
+    height: 10vh;
+    transition: .4s;
+}
+
+nav.dark span {
+    color: #3454d1;
+}
+
+nav.dark hr {
+    background: #3454d1;
+}
+
+@media (max-width: 750px) {
+    
+    nav .row>:not(.reduced-menu-item) {
+        display: none !important;
+    }
+    
+}
+
+
+/* HEADER */
+header {
+    background: url('../images/wave-1.jpg') #C5CAFF;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header .home-tilt {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header .row {
+    align-items: center;
+}
+
+header svg, header img {
+    width: 100%;
+    display: block;
+}
+
+header h1 {
+    font-family: 'Axis';
+    font-size: 2.5em;
+}
+
+header h1 span.title-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%:
+}
+
+header h1 span.title-row span.title-letter {
+    width: 25%;
+    text-align: center;
+}
+
+header h3 a {
+    color: inherit;
+}
+
+
+/* SECTIONS */
+section article {
+    padding: 50px 0 50px 0;
+    background: #efefef;
+    position: relative;
+    z-index: 10;
+}
+
+section article.full-height {
+    min-height: 100vh;
+    padding: 100px 0 100px 0;
+}
+
+section article:nth-of-type(even) {
+    background: #3454D1;
+}
+
+
+/* FOOTER */
+footer {
+    background: #C5CAFF;
+}
+
+footer * {
+    color: #3454D1;
+}
+
+footer .row {
+    min-height: 20vh;
+    align-items: center;
+}
+
+
+/* ABOUT */
+#about #presentation-background {
+    height: 100%;
+    display: block;
+    background: #C9B55D;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#about .about-phrase {
+    background: #3454d1;
+    animation: aboutPhraseBg 10s infinite;
+}
+
+@keyframes aboutPhraseBg {
+    
+    50% {
+        background: #c5caff;
+    }
+    
+}
+
+
+/* CONCTACT */
+#contact > .full-height {
+    padding-top: 0;
+}
+
+#contact #map {
+    height: 30vh;
+    width: 100%;
+}
+
+#contact p {
+    margin-bottom: 50px;
+}
+
+#contact p i {
+    color: #c9b55d;
+    font-size: 2em;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#contact p#contact-email:after {
+    content: "hello@baptistevillemur.fr";
+}
+
+#contact p#contact-phone:after {
+    content: "06 23 26 64 42";
+}
+
+#contact p#contact-address span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact p#contact-address span#contact-address-street:after {
+    content: "17b, rue des merciers";
+}
+
+#contact p#contact-address span#contact-address-town:after {
+    content: "17000 La Rochelle";
+}
+
+#contact p#contact-address span#contact-address-country:after {
+    content: "FRANCE";
+}
+
+#contact form #email:not(.outline-red) + span {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
