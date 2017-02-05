@@ -42,6 +42,7 @@ $(document).ready(function () {
         var form = $(this).parents('form');
         console.log(form);
         
+        form.find('input, textarea').removeClass('outline-red');
         
         var firstname = form.find('#firstname').val();
         var lastname = form.find('#lastname').val();
@@ -55,10 +56,9 @@ $(document).ready(function () {
         
         var isEmail = email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 
-        if ( firstname.length != 0 && lastname.length != 0 && email.length != 0 && message.length != 0 && isEmail ) {
+        if ( firstname.length != 0 && lastname.length != 0 && email.length != 0 && message.length > 1 && isEmail ) {
             
             console.log('form ok');
-            form.find('#email').addClass('outline-red');
 
             var post = $.ajax({
                 url: 'http://baptistevillemur.fr/V3/form.php',
@@ -92,15 +92,29 @@ $(document).ready(function () {
 
             });
 
-        }else if( !isEmail ) {
-            
-            console.log('not email');
-            form.find('#email').addClass('outline-red');
-            
-            
         }else {
+            
+            if( !isEmail ) {
+
+                console.log('not email');
+                form.find('#email').addClass('outline-red');
+
+            }
 
             console.log('form error');
+            form.find('input').filter(function() {
+                
+                console.log(!this.value);
+                return !this.value;
+                
+            }).addClass('outline-red');
+                
+            form.find('textarea').filter(function() {
+                
+                console.log( this.value == '');
+                return this.value == '';
+                
+            }).addClass('outline-red');
 
         }
 

@@ -345,7 +345,7 @@ input:focus, textarea:focus {
     outline: 2px solid #3454d1;
 }
 
-input.outline-red, text-area.outline-red {
+input.outline-red, textarea.outline-red {
     outline: 2px solid #d42323;
 }
 
