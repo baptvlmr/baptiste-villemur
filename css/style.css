@@ -181,7 +181,7 @@ section article:nth-of-type(even) {
 
 /* FOOTER */
 footer {
-    background: #C5CAFF;
+    background: #0C090D;
 }
 
 footer * {
@@ -207,6 +207,10 @@ footer .row {
 #about .about-timeline {
     padding: 0;
     margin-bottom: -2px;
+}
+
+#about #bodymovin svg defs {
+    display: none;
 }
 
 

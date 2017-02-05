@@ -6,103 +6,103 @@ var animationData = {
         "w": 246,
         "h": 229,
         "u": "images/",
-        "p": "img_0.png"
+        "p": "img_0.svg"
     }, {
         "id": "image_1",
         "w": 233,
         "h": 172,
         "u": "images/",
-        "p": "img_1.png"
+        "p": "img_1.svg"
     }, {
         "id": "image_2",
         "w": 246,
         "h": 233,
         "u": "images/",
-        "p": "img_2.png"
+        "p": "img_2.svg"
     }, {
         "id": "image_3",
         "w": 246,
         "h": 229,
         "u": "images/",
-        "p": "img_3.png"
+        "p": "img_3.svg"
     }, {
         "id": "image_4",
         "w": 246,
         "h": 229,
         "u": "images/",
-        "p": "img_4.png"
+        "p": "img_4.svg"
     }, {
         "id": "image_5",
         "w": 295,
         "h": 172,
         "u": "images/",
-        "p": "img_5.png"
+        "p": "img_5.svg"
     }, {
         "id": "image_6",
         "w": 160,
         "h": 93,
         "u": "images/",
-        "p": "img_6.png"
+        "p": "img_6.svg"
     }, {
         "id": "image_7",
         "w": 154,
         "h": 127,
         "u": "images/",
-        "p": "img_7.png"
+        "p": "img_7.svg"
     }, {
         "id": "image_8",
         "w": 81,
         "h": 81,
         "u": "images/",
-        "p": "img_8.png"
+        "p": "img_8.svg"
     }, {
         "id": "image_9",
         "w": 81,
         "h": 81,
         "u": "images/",
-        "p": "img_9.png"
+        "p": "img_9.svg"
     }, {
         "id": "image_10",
         "w": 81,
         "h": 81,
         "u": "images/",
-        "p": "img_10.png"
+        "p": "img_10.svg"
     }, {
         "id": "image_11",
         "w": 61,
         "h": 61,
         "u": "images/",
-        "p": "img_11.png"
+        "p": "img_11.svg"
     }, {
         "id": "image_12",
         "w": 61,
         "h": 61,
         "u": "images/",
-        "p": "img_12.png"
+        "p": "img_12.svg"
     }, {
         "id": "image_13",
         "w": 1989,
         "h": 173,
         "u": "images/",
-        "p": "img_13.png"
+        "p": "img_13.svg"
     }, {
         "id": "image_14",
         "w": 380,
         "h": 380,
         "u": "images/",
-        "p": "img_14.png"
+        "p": "img_14.svg"
     }, {
         "id": "image_15",
         "w": 500,
         "h": 500,
         "u": "images/",
-        "p": "img_15.png"
+        "p": "img_15.svg"
     }, {
         "id": "image_16",
         "w": 1921,
         "h": 501,
         "u": "images/",
-        "p": "img_16.png"
+        "p": "img_16.svg"
     }],
     "layers": [{
         "ddd": 0,
@@ -932,8 +932,8 @@ var animationData = {
     "v": "4.5.3",
     "ddd": 0,
     "ip": 0,
-    "op": 899.000036617021,
-    "fr": 29.9700012207031,
+    "op": 600,
+    "fr": 30,
     "w": 1920,
     "h": 500
 };

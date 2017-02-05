@@ -309,10 +309,10 @@ strong {
     font-weight: lighter;
 }
 
-.txt-white { color: #efefef; }
-.txt-black { color: #0C090D; }
-.txt-blue  { color: #3454D1; }
-.txt-beige  { color: #c9b55d; }
+.txt-white, .txt-white * { color: #efefef; }
+.txt-black, .txt-black * { color: #0C090D; }
+.txt-blue,  .txt-blue *  { color: #3454D1; }
+.txt-beige, .txt-beige * { color: #c9b55d; }
 
 
 /* LISTS
