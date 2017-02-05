@@ -204,12 +204,20 @@ footer .row {
     z-index: -1;
 }
 
-#about .about-phrase {
-    background: #3454d1;
-    animation: aboutPhraseBg 10s infinite;
+#about .about-timeline {
+    padding: 0;
+    margin-bottom: -2px;
 }
 
-@keyframes aboutPhraseBg {
+
+/* Skills */
+
+#skills .skills-phrase {
+    background: #3454d1;
+    animation: skillsPhraseBg 10s infinite;
+}
+
+@keyframes skillsPhraseBg {
     
     50% {
         background: #c5caff;
