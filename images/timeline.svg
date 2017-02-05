@@ -12,9 +12,9 @@
 	.st7{font-size:30px;}
 	.st8{font-size:50px;}
 	.st9{fill:#EFEFEF;}
-	.st10{font-family:'Work Sans'; font-weight: medium;}
+	.st10{font-family:'Work Sans'; font-weight: bold;}
 	.st11{font-size:20px;}
-	.st12{font-family:'Work Sans'; font-weight: regular;}
+	.st12{font-family:'Work Sans'; font-weight: normal;}
 	.st13{font-size:18px;}
 	.st14{font-size:70px;}
 	.st15{letter-spacing:23;}

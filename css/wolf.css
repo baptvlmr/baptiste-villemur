@@ -275,7 +275,7 @@ a {
     color: inherit;
 }
 
-a[target="_blank"]:hover:after {
+a[target="_blank"]:not(.a-no-after):hover:after {
     content: ' ↗';
     transform: rotate(45deg);
 }
@@ -286,6 +286,14 @@ em {
 
 strong {
     
+}
+
+.txt-left, .txt-left * {
+    text-align: left;
+}
+
+.txt-right, .txt-right * {
+    text-align: right;
 }
 
 .txt-center, .txt-center * {
