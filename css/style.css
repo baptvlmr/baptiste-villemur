@@ -148,7 +148,7 @@ header h1 span.title-row {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    width: 100%:
+    width: 100%;
 }
 
 header h1 span.title-row span.title-letter {
