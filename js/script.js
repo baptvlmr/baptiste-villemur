@@ -2,19 +2,13 @@ $(document).ready(function () {
 
     console.log('Document ready');
 
+    $('a[href="#"]').click( function(e) { e.preventDefault(); })
 
-    // Header H1
-    /*var hh1 = $('header h1');
-    var hh1t = hh1.text().replace(' ', '');
-    var hh1l = hh1t.split('');
     
-    rows = 0;
-    hh1l.forEach(function(letter, index) {
-        
-        console.log(letter);
-        
-    });*/
-
+    // Menu
+    $('a#menu-open').click( function(e) { $('nav').addClass('menu-show'); })
+    $('a#menu-close').click( function(e) { $('nav').removeClass('menu-show'); })
+    
 
     // Add .titl titl attributes
     const tilt = $('.tilt')
@@ -109,42 +103,6 @@ $(document).ready(function () {
 
     });
     
-    // Nav color change
-    var sections = $('body > section');
-    sections.each(function (index, section) {
-
-        var sectionArticles = $(section).children('article');
-
-        sectionArticles.each(function (index, article) {
-
-            new Waypoint({
-
-                element: $(article),
-                handler: function (direction) {
-
-                    if (direction == 'down') {
-                        if (index % 2 == 0) {
-                            $('nav').addClass('dark');
-                        } else {
-                            $('nav').removeClass('dark');
-                        }
-                    } else {
-                        if (index % 2 == 0) {
-                            $('nav').removeClass('dark');
-                        } else {
-                            $('nav').addClass('dark');
-                        }
-                    }
-
-                },
-                offset: 50
-
-            });
-
-        });
-
-    });
-
 });
 
 
