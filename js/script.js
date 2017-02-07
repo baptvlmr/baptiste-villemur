@@ -67,6 +67,7 @@ $(document).ready(function () {
             post.done(function (data) {
 
                 notif( 'Votre email a bien été envoyé.', 'success' );
+                form.find('input, textarea').val('');
 
             });
 
