@@ -90,6 +90,18 @@ figure:hover figcaption {
     position: absolute;
 }
 
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+.bg-white { background-color: #efefef; }
+.bg-black { background-color: #0C090D; }
+.bg-blue  { background-color: #3454D1; }
+.bg-beige { background-color: #c9b55d; }
+
 
 /* GRID
 ----------------------------------------*/
@@ -267,8 +279,11 @@ p {
     font-family: 'Work Sans', sans-serif;
     color: #3454d1;
     letter-spacing: 0.5px;
-    margin-bottom: 15px;
     text-align: left;
+}
+
+p:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 a {
@@ -373,9 +388,12 @@ input.outline-red, textarea.outline-red {
     outline: 2px solid #d42323;
 }
 
-
 input.outline-red:focus, text-area.outline-red:focus {
     outline: 2px solid #d42323;
+}
+
+input:not(.outline-red) + span.red-notice, textarea:not(.outline-red) + span.red-notice {
+    display: none;
 }
 
 input[type="radio"], input[type="checkbox"]{
@@ -487,5 +505,51 @@ select:focus {
 ----------------------------------------*/
 
 abbr {
-    border-bottom: 1px dotted;
 }
+
+
+/* NOTIFCATIONS
+----------------------------------------*/
+.notif {
+    padding: 10px;
+    height: 10vh;
+}
+
+.notif-in {
+    animation: notifIn .4s forwards;
+}
+
+.notif-out {
+    animation: notifOut .4s forwards;
+}
+
+@keyframes notifIn {
+    
+    from {
+        top: -10vh;
+    }
+    
+    to {
+        top: 0;
+    }
+    
+}
+
+@keyframes notifOut {
+    
+    from {
+        top: 0;
+    }
+    
+    to {
+        top: -10vh;
+    }
+    
+}
+
+
+
+
+
+
+

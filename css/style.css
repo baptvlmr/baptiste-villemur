@@ -276,10 +276,6 @@ footer .row {
     content: "FRANCE";
 }
 
-#contact form #email:not(.outline-red) + span {
-    display: none;
-}
-
 
 
 

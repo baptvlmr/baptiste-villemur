@@ -33,31 +33,23 @@ $(document).ready(function () {
 
 
     // Ajax email
-    $('#contact form button[type="submit"]').click( function(e) {
-        
+    $('#contact form button[type="submit"]').click(function (e) {
+
         e.preventDefault();
-        
-        console.log('submit clicked');
 
         var form = $(this).parents('form');
-        console.log(form);
-        
+
         form.find('input, textarea').removeClass('outline-red');
-        
+
         var firstname = form.find('#firstname').val();
         var lastname = form.find('#lastname').val();
         var email = form.find('#email').val();
         var message = form.find('#message').val();
-        
-        console.log(firstname);
-        console.log(lastname);
-        console.log(email);
-        console.log(message);
-        
-        var isEmail = email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 
-        if ( firstname.length != 0 && lastname.length != 0 && email.length != 0 && message.length > 1 && isEmail ) {
-            
+        var isEmail = email.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+
+        if (firstname.length != 0 && lastname.length != 0 && email.length != 0 && message.length > 1 && isEmail) {
+
             console.log('form ok');
 
             var post = $.ajax({
@@ -74,15 +66,13 @@ $(document).ready(function () {
 
             post.done(function (data) {
 
-                console.log(data);
-                console.log('success');
+                notif( 'Votre email a bien été envoyé.', 'success' );
 
             });
 
             post.fail(function (data) {
 
-                console.log(data);
-                console.log('fail');
+                notif( 'Il y a eu une erreur lors de l\'envoi de votre email... Veuillez réessayez.', 'fail' );
 
             });
 
@@ -92,9 +82,9 @@ $(document).ready(function () {
 
             });
 
-        }else {
-            
-            if( !isEmail ) {
+        } else {
+
+            if (!isEmail) {
 
                 console.log('not email');
                 form.find('#email').addClass('outline-red');
@@ -102,25 +92,22 @@ $(document).ready(function () {
             }
 
             console.log('form error');
-            form.find('input').filter(function() {
-                
-                console.log(!this.value);
+            form.find('input').filter(function () {
+
                 return !this.value;
-                
+
             }).addClass('outline-red');
-                
-            form.find('textarea').filter(function() {
-                
-                console.log( this.value == '');
+
+            form.find('textarea').filter(function () {
+
                 return this.value == '';
-                
+
             }).addClass('outline-red');
 
         }
 
     });
-
-
+    
     // Nav color change
     var sections = $('body > section');
     sections.each(function (index, section) {
@@ -158,3 +145,58 @@ $(document).ready(function () {
     });
 
 });
+
+
+function notif( msg, status ) {
+
+    var notif = $('<div></div>');
+    var notifClasses = [
+        'notif',
+        'notif-in',
+        'shadow',
+        'fixed',
+        'vertical-align',
+        's-full-width',
+        'm-full-width',
+        'l-full-width'
+    ];
+
+    notifClasses.forEach(function (clss, index) {
+
+        notif.addClass(clss);
+
+    });
+
+    var icon = $('<div></div>').addClass('fa');
+    switch (status) {
+        
+        case 'success':
+            notif.addClass('bg-beige').addClass('txt-white');
+            icon.addClass('fa-check');
+            break;
+            
+        case 'fail':
+            notif.addClass('bg-black').addClass('txt-beige');
+            icon.addClass('fa-time');
+            break;
+            
+        default:
+            notif.addClass('bg-blue').addClass('txt-white');
+            icon = '';
+        
+    }
+    
+    var notifContent = $('<p></p>').text(' ' + msg).prepend(icon);
+    notif.append(notifContent);
+
+    $(notif).appendTo('body').delay(2000).queue(function () {
+        console.log('change class');
+        $(notif).removeClass('notif-in').addClass('notif-out');
+    });
+    setTimeout(function(){
+        
+        $(notif).remove();
+        
+    }, 3000)
+
+}
