@@ -6,8 +6,31 @@ $(document).ready(function () {
 
     
     // Menu
-    $('a#menu-open').click( function(e) { $('nav').addClass('menu-show'); })
-    $('a#menu-close').click( function(e) { $('nav').removeClass('menu-show'); })
+    $('a#menu-toggle').click( function(e) {
+        
+        if( !$('nav').hasClass('menu-show') ) {
+            
+            $('nav').addClass('menu-show');
+            $('nav .menu').removeClass('menu-out');
+            $('nav .bar p').removeClass('txt-black').addClass('txt-white');
+            
+        }else {
+            
+            $('nav .menu').addClass('menu-out');
+            $('nav .bar p').removeClass('txt-white').addClass('txt-black');
+            
+            setTimeout(function() {
+                
+                $('nav').removeClass('menu-show');
+                
+            }, 400);
+            
+        }
+        
+    });
+    
+    
+    // 
     
 
     // Add .titl titl attributes

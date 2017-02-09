@@ -31,13 +31,46 @@ nav .bar a {
 nav .menu {
     display: none;
     height: 100vh;
-    width: 100%;
-    background-image: url(../images/wave-2.jpg);
-    background-size: cover;
+    right: 0;
+    z-index: 99;
+    position: relative;
 }
 
 nav.menu-show .menu {
     display: flex;
+    animation: slideIn .5s forwards;
+}
+
+nav .menu.menu-out {
+    animation: slideOut .5s forwards;
+}
+
+@keyframes slideIn {
+    
+    from {
+        right: -100px;
+        opacity: 0;
+    }
+    
+    to {
+        right: 0;
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideOut {
+    
+    from {
+        right: 0;
+        opacity: 1;
+    }
+    
+    to {
+        right: -100px;
+        opacity: 0;
+    }
+    
 }
 
 nav .menu .close-bar {
@@ -54,9 +87,12 @@ nav .bar i, nav .menu .close-bar i {
     padding: 15px;
 }
 
+nav .menu ul {
+    padding: 20px;
+}
+
 nav .menu ul li {
     font-size: 1.5em;
-    font-weight: bold;
 }
 
 nav .menu ul li:not(:last-of-type) {

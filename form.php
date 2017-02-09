@@ -48,7 +48,7 @@ $message.= $br.$message_html.$br;
 $message.= $br."--".$boundary."--".$br;
 $message.= $br."--".$boundary."--".$br;*/
  
-// Envoi de l'e-mail.
+// Sending email
 $sending = mail($destination, $subject, $message, $header);
 
 $mail = array(
