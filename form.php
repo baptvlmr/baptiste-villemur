@@ -1,5 +1,7 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+
 $firstname = htmlspecialchars($_POST['firstname']);
 $lastname  = htmlspecialchars($_POST['lastname']);
 $email     = htmlspecialchars($_POST['email']);
@@ -30,13 +32,13 @@ $subject = "Formulaire de contact";
 $header = "From: \"" . $firstname . " " . $lastname . "\"<" . $email . ">".$br;
 $header.= "Reply-to: \"" . $firstname . " " . $lastname . "\" <" . $email . ">".$br;
 $header.= "MIME-Version: 1.0".$br;
-$header.= "Content-Type: multipart/alternative;".$br." boundary=\"$boundary\"".$br;
+$header.= "Content-Type: multipart/alternative; charset=UTF-8".$br." boundary=\"$boundary\"".$br;
  
 // Create message.
 $message = $br."--".$boundary.$br;
 
 // Add message text format
-$message.= "Content-Type: text/plain; charset=\"ISO-8859-1\"".$br;
+$message.= "Content-Type: text/plain; charset=UTF-8".$br;
 $message.= "Content-Transfer-Encoding: 8bit".$br;
 $message.= $br.$message_txt.$br;
 $message.= $br."--".$boundary.$br;

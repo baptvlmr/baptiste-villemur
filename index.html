@@ -6,7 +6,7 @@
     <!-- PAGE NEEDS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/bv-logo-icon.png">
+    <link rel="icon" href="assets/images/bv-logo-icon.png">
 
     <title>BAPTISTE VILLEMUR</title>
 
@@ -14,7 +14,9 @@
     <meta name="author" content="Baptiste Villemur">
     <meta name="description" content="Site personnel de Baptiste Villemur, étudiant en licence professionnelle Création Multimédia.">
     <meta name="keywords" content="baptiste villemur, baptiste, villemur, étudiant, etudiant, multimédia, multimedia, lpcm, lp cm, lp, cm, dut mmi, dut, mmi, iut, tarbes, la rochelle, webdesign, developpement, web, infographie">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="theme-color" content="#3454d1">
 
     <!-- FACEBOOK -->
     <meta property="og:title" content="BAPTISTE VILLEMUR">
@@ -25,10 +27,10 @@
     <meta property="og:type" content="website">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/wolf.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/wolf.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- FONTS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,500">
@@ -37,419 +39,551 @@
 </head>
 
 <!--
-          
-        Welcome on my source code ! Have fun checking...
-          
 
-          _____                            _____                            _____                        _____              
-         /\    \                          /\    \                          /\    \                      /\    \             
-        /::\    \                        /::\    \                        /::\    \                    /::\    \            
-       /::::\    \                      /::::\    \                      /::::\    \                   \:::\    \           
-      /::::::\    \                    /::::::\    \                    /::::::\    \                   \:::\    \          
-     /:::/\:::\    \                  /:::/\:::\    \                  /:::/\:::\    \                   \:::\    \         
-    /:::/__\:::\    \                /:::/__\:::\    \                /:::/__\:::\    \                   \:::\    \        
-   /::::\   \:::\    \              /::::\   \:::\    \              /::::\   \:::\    \                  /::::\    \       
-  /::::::\   \:::\    \            /::::::\   \:::\    \            /::::::\   \:::\    \                /::::::\    \      
- /:::/\:::\   \:::\ ___\          /:::/\:::\   \:::\    \          /:::/\:::\   \:::\____\              /:::/\:::\    \     
-/:::/__\:::\   \:::|    |        /:::/  \:::\   \:::\____\        /:::/  \:::\   \:::|    |            /:::/  \:::\____\    
-\:::\   \:::\  /:::|____|        \::/    \:::\  /:::/    /        \::/    \:::\  /:::|____|           /:::/    \::/    /    
- \:::\   \:::\/:::/    /          \/____/ \:::\/:::/    /          \/_____/\:::\/:::/    /           /:::/    / \/____/     
-  \:::\   \::::::/    /                    \::::::/    /                    \::::::/    /           /:::/    /              
-   \:::\   \::::/    /                      \::::/    /                      \::::/    /           /:::/    /               
-    \:::\  /:::/    /                       /:::/    /                        \::/____/            \::/    /                
-     \:::\/:::/    /                       /:::/    /                          ~~                   \/____/                 
-      \::::::/    /                       /:::/    /                                                                        
-       \::::/    /                       /:::/    /                                                                         
-        \::/____/                        \::/    /                                                                          
-         ~~                               \/____/                                                                           
-                                                                                                                            
-          _____                            _____                        _____                            _____              
-         /\    \                          /\    \                      /\    \                          /\    \             
-        /::\    \                        /::\    \                    /::\    \                        /::\    \            
-        \:::\    \                      /::::\    \                   \:::\    \                      /::::\    \           
-         \:::\    \                    /::::::\    \                   \:::\    \                    /::::::\    \          
-          \:::\    \                  /:::/\:::\    \                   \:::\    \                  /:::/\:::\    \         
-           \:::\    \                /:::/__\:::\    \                   \:::\    \                /:::/__\:::\    \        
-           /::::\    \               \:::\   \:::\    \                  /::::\    \              /::::\   \:::\    \       
-  ____    /::::::\    \            ___\:::\   \:::\    \                /::::::\    \            /::::::\   \:::\    \      
- /\   \  /:::/\:::\    \          /\   \:::\   \:::\    \              /:::/\:::\    \          /:::/\:::\   \:::\    \     
-/::\   \/:::/  \:::\____\        /::\   \:::\   \:::\____\            /:::/  \:::\____\        /:::/__\:::\   \:::\____\    
-\:::\  /:::/    \::/    /        \:::\   \:::\   \::/    /           /:::/    \::/    /        \:::\   \:::\   \::/    /    
- \:::\/:::/    / \/____/          \:::\   \:::\   \/____/           /:::/    / \/____/          \:::\   \:::\   \/____/     
-  \::::::/    /                    \:::\   \:::\    \              /:::/    /                    \:::\   \:::\    \         
-   \::::/____/                      \:::\   \:::\____\            /:::/    /                      \:::\   \:::\____\        
-    \:::\    \                       \:::\  /:::/    /            \::/    /                        \:::\   \::/    /        
-     \:::\    \                       \:::\/:::/    /              \/____/                          \:::\   \/____/         
-      \:::\    \                       \::::::/    /                                                 \:::\    \             
-       \:::\____\                       \::::/    /                                                   \:::\____\            
-        \::/    /                        \::/    /                                                     \::/    /            
-         \/____/                          \/____/                                                       \/____/             
-                                                                                                                            
-          _____                            _____                            _____                    _____                  
-         /\    \                          /\    \                          /\    \                  /\    \                 
-        /::\____\                        /::\    \                        /::\____\                /::\____\                
-       /:::/    /                        \:::\    \                      /:::/    /               /:::/    /                
-      /:::/    /                          \:::\    \                    /:::/    /               /:::/    /                 
-     /:::/    /                            \:::\    \                  /:::/    /               /:::/    /                  
-    /:::/____/                              \:::\    \                /:::/    /               /:::/    /                   
-    |::|    |                               /::::\    \              /:::/    /               /:::/    /                    
-    |::|    |     _____            ____    /::::::\    \            /:::/    /               /:::/    /                     
-    |::|    |    /\    \          /\   \  /:::/\:::\    \          /:::/    /               /:::/    /                      
-    |::|    |   /::\____\        /::\   \/:::/  \:::\____\        /:::/____/               /:::/____/                       
-    |::|    |  /:::/    /        \:::\  /:::/    \::/    /        \:::\    \               \:::\    \                       
-    |::|    | /:::/    /          \:::\/:::/    / \/____/          \:::\    \               \:::\    \                      
-    |::|____|/:::/    /            \::::::/    /                    \:::\    \               \:::\    \                     
-    |:::::::::::/    /              \::::/____/                      \:::\    \               \:::\    \                    
-    \::::::::::/____/                \:::\    \                       \:::\    \               \:::\    \                   
-     ~~~~~~~~~~                       \:::\    \                       \:::\    \               \:::\    \                  
-                                       \:::\    \                       \:::\    \               \:::\    \                 
-                                        \:::\____\                       \:::\____\               \:::\____\                
-                                         \::/    /                        \::/    /                \::/    /                
-                                          \/____/                          \/____/                  \/____/                 
-                                                                                                                            
-          _____                            _____                            _____                            _____          
-         /\    \                          /\    \                          /\    \                          /\    \         
-        /::\    \                        /::\____\                        /::\____\                        /::\    \        
-       /::::\    \                      /::::|   |                       /:::/    /                       /::::\    \       
-      /::::::\    \                    /:::::|   |                      /:::/    /                       /::::::\    \      
-     /:::/\:::\    \                  /::::::|   |                     /:::/    /                       /:::/\:::\    \     
-    /:::/__\:::\    \                /:::/|::|   |                    /:::/    /                       /:::/__\:::\    \    
-   /::::\   \:::\    \              /:::/ |::|   |                   /:::/    /                       /::::\   \:::\    \   
-  /::::::\   \:::\    \            /:::/  |::|___|______            /:::/    /      _____            /::::::\   \:::\    \  
- /:::/\:::\   \:::\    \          /:::/   |::::::::\    \          /:::/____/      /\    \          /:::/\:::\   \:::\____\ 
-/:::/__\:::\   \:::\____\        /:::/    |:::::::::\____\        |:::|    /      /::\____\        /:::/  \:::\   \:::|    |
-\:::\   \:::\   \::/    /        \::/    / ~~~~~/:::/    /        |:::|____\     /:::/    /        \::/   |::::\  /:::|____|
- \:::\   \:::\   \/____/          \/____/      /:::/    /          \:::\    \   /:::/    /          \/____|:::::\/:::/    / 
-  \:::\   \:::\    \                          /:::/    /            \:::\    \ /:::/    /                 |:::::::::/    /  
-   \:::\   \:::\____\                        /:::/    /              \:::\    /:::/    /                  |::|\::::/    /   
-    \:::\   \::/    /                       /:::/    /                \:::\__/:::/    /                   |::| \::/____/    
-     \:::\   \/____/                       /:::/    /                  \::::::::/    /                    |::|  ~|          
-      \:::\    \                          /:::/    /                    \::::::/    /                     |::|   |          
-       \:::\____\                        /:::/    /                      \::::/    /                      \::|   |          
-        \::/    /                        \::/    /                        \::/____/                        \:|   |          
-         \/____/                          \/____/                          ~~                               \|___|          
-                                                                                                                            
+    Welcome on my source code ! Have fun checking...
+
+                           ___             ___
+         _____            /\  \           /\  \
+        /::\  \          /::\  \         /::\  \         ___
+       /:/\:\  \        /:/\:\  \       /:/\:\__\       /\__\
+      /:/ /::\__\      /:/ /::\  \     /:/ /:/  /      /:/  /
+     /:/_/:/\:|__|    /:/_/:/\:\__\   /:/_/:/  /      /:/__/
+     \:\/:/ /:/  /    \:\/:/  \/__/   \:\/:/  /      /::\  \
+      \::/_/:/  /      \::/__/         \::/__/      /:/\:\  \
+       \:\/:/  /        \:\  \          \:\  \      \/__\:\  \
+        \::/  /          \:\__\          \:\__\          \:\__\
+         \/__/            \/__/           \/__/           \/__/
+                                           ___             ___
+          ___                             /\  \           /\  \
+         /\  \                           |::\  \         /::\  \
+         \:\  \                          |:|:\  \       /:/\:\__\
+          \:\  \       ___     ___     __|:|\:\  \     /:/ /:/  /
+      ___  \:\__\     /\  \   /\__\   /::::|_\:\__\   /:/_/:/__/___
+     /\  \ |:|  |     \:\  \ /:/  /   \:\~~\  \/__/   \:\/:::::/  /
+     \:\  \|:|  |      \:\  /:/  /     \:\  \          \::/~~/~~~~
+      \:\__|:|__|       \:\/:/  /       \:\  \          \:\~~\
+       \::::/__/         \::/  /         \:\__\          \:\__\
+        ~~~~              \/__/           \/__/           \/__/
 
 -->
 
 <body>
 
     <!-- NAV -->
-    <nav>
+    <nav id="nav">
         <div class="row full-width align-right fixed">
-            <div class="s-two m-four l-eight columns"></div>
+            <div class="s-two m-four l-eight columns menu-toggle"></div>
             <div class="menu menu-out s-ten m-eight l-four columns vertical-align shadow bg-beige txt-white">
                 <ul class="txt-right">
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#about">Présentation</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="menu-toggle" href="#home">Accueil</a></li>
+                    <li><a class="menu-toggle" href="#about">Présentation</a></li>
+                    <li><a class="menu-toggle" href="#skills">Compétences</a></li>
+                    <li><a class="menu-toggle" href="#portfolio">Portfolio</a></li>
+                    <li><a class="menu-toggle" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
-        
-        <div class="bar row s-full-width m-full-width l-full-width align-right fixed vertical-align">
+
+        <div class="bar row s-full-width m-full-width l-full-width fixed vertical-align">
+            <div class="s-two m-four l-eight columns">
+                <a href="#home">
+                    <figure>
+                        <img src="assets/images/bv-logo.svg" alt="Logo">
+                    </figure>
+                </a>
+            </div>
             <div class="s-ten m-eight l-four columns">
-                <p class="txt-right txt-black"><a id="menu-toggle" href="#">Menu <i class="fa fa-bars"></i></a></p>
+                <p class="txt-right txt-black">
+                    <a class="menu-toggle" href="#">Menu <i class="fa fa-bars"></i></a>
+                </p>
             </div>
         </div>
     </nav>
     <!-- END NAV -->
 
-    <!-- HEADER -->
-    <header id="home">
-        <div class="home-tilt tilt">
-            <div class="row">
-                <div class="s-six m-six l-four columns">
+    <!-- CONTENT WRAPPPER -->
+    <div id="content-wrapper">
 
-                    <figure>
-                        <img src="images/bv-logo.svg" alt="Logo">
-                    </figure>
+        <!-- HEADER -->
+        <header id="home">
+            <div class="p-scroll">
+                <div class="home-tilt tilt">
+                    <div class="row">
+                        <div class="s-six m-six l-four columns">
 
-                </div>
+                            <figure>
+                                <img src="assets/images/bv-logo.svg" alt="Logo">
+                            </figure>
 
-                <div class="s-six m-six l-four columns">
+                        </div>
 
-                    <h1 class="txt-white">
-                        <span class="title-row">
-                            <span class="title-letter">B</span>
-                            <span class="title-letter">a</span>
-                            <span class="title-letter">p</span>
-                            <span class="title-letter">t</span>
-                        </span>
-                        <span class="title-row">
-                            <span class="title-letter">i</span>
-                            <span class="title-letter">s</span>
-                            <span class="title-letter">t</span>
-                            <span class="title-letter">e</span>
-                        </span>
-                        <span class="title-row">
-                             
-                            <span class="title-letter">V</span>
-                            <span class="title-letter">i</span>
-                            <span class="title-letter">l</span>
-                            <span class="title-letter">l</span>
-                        </span>
-                        <span class="title-row">
-                            <span class="title-letter">e</span>
-                            <span class="title-letter">m</span>
-                            <span class="title-letter">u</span>
-                            <span class="title-letter">r</span>
-                        </span>
-                    </h1>
+                        <div class="s-seven m-six l-four columns">
 
+                            <h1 id="big-title" class="txt-white"><span class="title-row"><span class="title-letter">B</span><span class="title-letter">a</span><span class="title-letter">p</span><span class="title-letter">t</span></span><span class="title-row"><span class="title-letter">i</span><span class="title-letter">s</span><span class="title-letter">t</span><span class="title-letter">e</span></span> <span class="title-row"><span class="title-letter">V</span><span class="title-letter">i</span><span class="title-letter">l</span><span class="title-letter">l</span></span><span class="title-row"><span class="title-letter">e</span><span class="title-letter">m</span><span class="title-letter">u</span><span class="title-letter">r</span></span></h1>
+
+                            <!-- Span save -->
+                            <!--<span class="title-row"><span class="title-letter">B</span><span class="title-letter">a</span><span class="title-letter">p</span><span class="title-letter">t</span></span><span class="title-row"><span class="title-letter">i</span><span class="title-letter">s</span><span class="title-letter">t</span><span class="title-letter">e</span></span><span class="title-row"><span class="title-letter">V</span><span class="title-letter">i</span><span class="title-letter">l</span><span class="title-letter">l</span></span><span class="title-row"><span class="title-letter">e</span><span class="title-letter">m</span><span class="title-letter">u</span><span class="title-letter">r</span></span>-->
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="s-twelve m-twelve l-twelve columns txt-center txt-mono txt-white">
+                            <h2 class="txt-mono">Etudiant développement web & webdesign</h2>
+                            <h3 class="txt-mono">Licence Professionnelle Création Multimédia</h3>
+                            <h4 class="txt-mono">Toulouse, France</h4>
+                            <p><a href="#about"><i class="fa fa-angle-down"></i></a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="s-twelve m-twelve l-twelve columns txt-center">
-                    <h2 class="txt-mono txt-white">Etudiant développement web & webdesign</h2>
-                    <h3 class="txt-mono txt-white">Licence Professionnelle Création Multimédia</h3>
-                    <h4 class="txt-mono txt-white">La Rochelle, France</h4>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- END HEADER -->
+        </header>
+        <!-- END HEADER -->
 
-    <!-- ABOUT -->
-    <section id="about">
-        <article class="full-height">
-            <div class="row vertical-align s-reverse m-reverse">
-                <div class="s-ten m-eight l-six columns">
+        <!-- ABOUT -->
+        <section id="about">
+            <article id="menu-appear" class="full-height">
+                <div class="row vertical-align s-reverse m-reverse">
+                    <div class="s-ten m-eight l-six columns p-scroll">
 
-                    <h2>Présentation</h2>
+                        <h2>Présentation</h2>
 
-                    <p>Je m'appelle <em>Baptiste Villemur</em>, je suis étudiant en <em><a href="http://sciences.univ-larochelle.fr/lp-creation-multimedia" target="_blank">licence professionnelle Création Multimédia</a></em>, à l’<em>Université de la Rochelle</em>.</p>
+                        <p>Je m'appelle <em>Baptiste Villemur</em>, je suis étudiant en <em><a href="http://sciences.univ-larochelle.fr/lp-creation-multimedia" target="_blank">licence professionnelle Création Multimédia</a></em>, à l’<em>Université de la Rochelle</em>.</p>
 
-                    <p>Après un <em>bac scientifique</em> j'ai décidé d'intégrer une formation multimédia, un <em><a href="http://www.iut-tarbes.fr/DUT-Metiers-du-Multimedia-et-de-l" target="_blank"><abbr title="Diplôme Universitaire Technologique">DUT</abbr> <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr></a></em> à l'<em>IUT de Tarbes</em>, qui pourrait m'apporter des connaissances très larges dans des domaines qui m'intéressent comme l'audiovisuel, l'infographie ou internet.</p>
+                        <p>Après un <em>bac scientifique</em> j'ai décidé d'intégrer une formation multimédia, un <em><a href="http://www.iut-tarbes.fr/DUT-Metiers-du-Multimedia-et-de-l" target="_blank"><abbr title="Diplôme Universitaire Technologique">DUT</abbr> <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr></a></em> à l'<em>IUT de Tarbes</em>, qui pourrait m'apporter des connaissances très larges dans des domaines qui m'intéressent comme l'audiovisuel, l'infographie ou internet.</p>
 
-                    <p>C'est grâce à cette formation que j'ai découvert le <em>webdesign</em> et le <em>développement web</em> qui sont des domaines qui m'intéressent de plus en plus et vers lesquels j'aimerais m'orienter professionnellement.</p>
+                        <p>C'est grâce à cette formation que j'ai découvert le <em>webdesign</em> et le <em>développement web</em> qui sont des domaines qui m'intéressent de plus en plus et vers lesquels j'aimerais m'orienter professionnellement.</p>
 
-                    <p>
                         <a href="cv.pdf" target="_blank" class="button blue">Télécharger mon C.V.</a>
-                    </p>
 
+                    </div>
+
+                    <div class="s-ten m-six l-four columns p-scroll" data-p-scroll=".2">
+                        <figure class="shadow tilt">
+                            <img src="assets/images/bapt-blue.jpg" alt="Baptiste Villemur">
+                            <figcaption class="bg-blue txt-mono txt-white">Il m'arrive également de sourire.</figcaption>
+                        </figure>
+                    </div>
                 </div>
+                <div id="presentation-background" class="shadow absolute s-four m-four l-four columns"></div>
+            </article>
 
-                <div class="s-six m-six l-four columns">
-                    <figure class="shadow tilt">
-                        <img src="images/bapt-blue.jpg" alt="Baptiste Villemur">
-                        <figcaption class="txt-mono txt-white">Il m'arrive également de sourire.</figcaption>
-                    </figure>
+            <article class="about-timeline s-hide m-hide">
+                <h3 class="txt-mono txt-white txt-center">
+                    <a href="cv.pdf" class="button">Voir mon C.V.</a>
+                </h3>
+            </article>
+
+        </section>
+        <!-- END ABOUT -->
+
+        <!-- SKILLS -->
+        <section id="skills">
+            <article class="full-height">
+                <div class="row">
+                    <div class="s-twelve m-twelve l-twelve columns txt-center">
+
+                        <h2 class="p-scroll" data-p-scroll=".2">Skills</h2>
+
+                    </div>
+                    <div class="row p-scroll" data-p-scroll=".15">
+                        <div class="s-twelve m-eight l-five columns p-scroll">
+                            <div class="card tilt" data-p-scroll=".25">
+                                <span class="txt-mono">1</span>
+                                <h3>Front-end</h3>
+                                <p>Intégration avec HTML5 et CSS3. Bonne connaissance de jQuery et EaselJS. Connaissances en TypeScript, ECMAScript 6, et Angular. Utilisation de Bower comme package manager et Gulp comme task runner.</p>
+                            </div>
+                        </div>
+                        <div class="s-twelve m-eight l-five columns p-scroll">
+                            <div class="card tilt" data-p-scroll=".3">
+                                <span class="txt-mono">2</span>
+                                <h3>Back-end</h3>
+                                <p>Bonne connaissance de PHP, particulièrement le développement de thèmes et plugins pour Wordpress.</p>
+                                <p>Très intéressé par l'apprentissage de Ruby on Rails, ou Symfony 2.</p>
+                            </div>
+                        </div>
+                        <div class="s-twelve m-eight l-five columns p-scroll">
+                            <div class="card tilt" data-p-scroll=".25">
+                                <span class="txt-mono">3</span>
+                                <h3>Application hybride</h3>
+                                <p>Connaissances en Cordova, PhoneGap, jQuery Mobile.</p>
+                                <p>En apprentissage du framework Ionic.</p>
+                            </div>
+                        </div>
+                        <div class="s-twelve m-eight l-five columns p-scroll">
+                            <div class="card tilt" data-p-scroll=".3">
+                                <span class="txt-mono">4</span>
+                                <h3>Webdesign</h3>
+                                <p>Conception d'interfaces et d'expériences utilisateur (UI/UX), de wireframes, de maquettes etc.</p>
+                                <p>Connaissances d'Experience Design, Illustrator et Photoshop.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="presentation-background" class="shadow absolute s-four m-four l-four columns"></div>
-        </article>
-        
-        <article class="about-timeline">            
-            <div id="bodymovin"></div>
-        </article>
-        
-    </section>
-    <!-- END ABOUT -->
+            </article>
 
-    <!-- SKILLS -->
-    <section id="skills">
-        <article class="full-height">
-            <div class="row">
-                <div class="s-twelve m-twelve l-twelve columns txt-center">
-                    
-                    <h2>Skills</h2>
+            <article class="skills-phrase">
+                <h3 class="txt-mono txt-beige txt-center">Always in progress</h3>
+            </article>
+        </section>
+        <!-- END SKILLS -->
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+            <article class="full-height">
+                <div class="row">
+                    <div class="s-twelve m-twelve l-twelve columns txt-center p-scroll" data-p-scroll=".2">
+
+                        <h2>Portfolio</h2>
+                        <p>Découvrez mes réalisations</p>
+
+                    </div>
+                </div>
                 
-                </div>
-            </div>
-        </article>
-
-        <article class="skills-phrase">
-            <h3 class="txt-mono txt-beige txt-center">Always in progress</h3>
-        </article>
-    </section>
-    <!-- END SKILLS -->
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-        <article class="full-height">
-            <div class="row">
-                <div class="s-twelve m-twelve l-twelve columns txt-center">
+                <div class="row">
+                    <div class="s-twelve m-eight l-five columns">
+                        <div class="card">
+                            <h3>Application hybride Chill Masters</h3>
+                            <figure><img src="assets/images/app-mockup" alt="Alttext"></figure>
+                            <p>Développement d’une application hybride pour Chill Masters. L’application permet d’écouter les sons partagés par Chill Masters ainsi que ceux sortis leur propre label et d’avoir accès à diverses informations.</p>
+                            <a href="portfolio/application-hybride-chill-masters" class="button blue">Voir le projet</a>
+                        </div>
+                    </div>
                     
-                    <h2>Porfolio</h2>
-                
-                </div>
-            </div>
-        </article>
-
-        <article>
-            <div class="row s-twelve m-twelve l-twelve columns">
-                <h3 class="txt-mono txt-white">Et bientôt d'autres projets !</h3>
-            </div>
-        </article>
-    </section>
-    <!-- END PORTFOLIO -->
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <article class="full-height">
-            <div class="row s-full-width m-full-width l-full-width">
-                <script>
-                    function initMap() {
-
-                        var bvLoc = {
-                            lat: 46.1602461,
-                            lng: -1.1528205
-                        };
-
-                        var mapStyle = [{"featureType": "administrative","elementType": "labels.text.fill","stylers": [{"color": "#444444"}]}, {"featureType": "landscape","stylers": [{"color": "#3454d1"}]}, {"featureType": "landscape.man_made","stylers": [{"color": "#3454d1"}, {"visibility": "off"}]}, {"featureType": "poi","stylers": [{"visibility": "off"}]}, {"featureType": "road","stylers": [{"color": "#c9b55d"}, {"saturation": -100}, {"lightness": 45}, {"visibility": "on"}]}, {"featureType": "road","elementType": "labels","stylers": [{"hue": "#ff0000"}, {"visibility": "off"}]}, {"featureType": "road","elementType": "labels.icon","stylers": [{"visibility": "off"}]}, {"featureType": "road","elementType": "labels.text","stylers": [{"visibility": "off"}]}, {"featureType": "road.arterial","stylers": [{"color": "#c9b55d"}]}, {"featureType": "road.arterial","elementType": "labels.icon","stylers": [{"visibility": "off"}]}, {"featureType": "road.highway","stylers": [{"color": "#c9b55d"}, {"visibility": "on"}]}, {"featureType": "road.highway","elementType": "geometry","stylers": [{"visibility": "simplified"}]}, {"featureType": "road.highway","elementType": "labels","stylers": [{"visibility": "off"}]}, {"featureType": "road.local","stylers": [{"color": "#c9b55d"}]}, {"featureType": "transit","stylers": [{"color": "#f0f757"}, {"visibility": "off"}]}, {"featureType": "water","stylers": [{"color": "#c5cdff"}, {"visibility": "on"}]}];
-
-                        // Create a map object and specify the DOM element for display.
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            center: bvLoc,
-                            scrollwheel: false,
-                            zoom: 13,
-                            styles: mapStyle,
-                            disableDefaultUI: true,
-                            zoomControl: true
-                        });
-
-                    }
-
-                </script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm81y4vTlz7G8wttTHkILtce0yKsYKCXY&callback=initMap" async defer></script>
-                <div id="map"></div>
-            </div>
-            <div class="row">
-                <div class="s-twelve m-twelve l-twelve columns txt-center">
-
-                    <h2>Contact</h2>
-                    <p>Restons en contact !</p>
-
-                </div>
-            </div>
-
-            <div class="row vertical-align">
-                <div class="s-twelve m-twelve l-five columns txt-center">
-
-                    <h3>Informations</h3>
-
-                    <p id="contact-email">
-                        <i class="fa fa-envelope-o"></i>
-                    </p>
-
-                    <p id="contact-phone">
-                        <i class="fa fa-phone"></i>
-                    </p>
-
-                    <p id="contact-address">
-                        <i class="fa fa-home"></i>
-                        <span id="contact-address-street"></span>
-                        <span id="contact-address-town"></span>
-                        <span id="contact-address-country"></span>
-                    </p>
-
-                </div>
-
-                <div class="s-twelve m-twelve l-five columns">
-
-                    <h2>Formulaire</h2>
+                    <div class="s-twelve m-eight l-five columns">
+                        <div class="card">
+                            <h3>Site Chill Masters</h3>
+                            <figure><img src="assets/images/app-mockup" alt="Alttext"></figure>
+                            <p>Conception et développement du site de Chill Masters dans le cadre d’une refonte graphique. Le nouveau site doit refléter l’univers de l’association et mettre en avant les activités du label.</p>
+                            <a href="portfolio/application-hybride-chill-masters" class="button blue">Voir le projet</a>
+                        </div>
+                    </div>
                     
-                    <form action="index.html" method="POST">
-
-                        <div class="row">
-                            <div class="s-six m-six l-six columns columns">
-                                <label for="firstname">Prénom</label>
-                                <input type="text" id="firstname" name="firstname">
-                                <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
-                            </div>
-
-                            <div class="s-six m-six l-six columns columns">
-                                <label for="lastname">Nom</label>
-                                <input type="text" id="lastname" name="lastname">
-                                <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
-                            </div>
+                    <div class="s-twelve m-eight l-five columns">
+                        <div class="card">
+                            <h3>Jeux CreateJS</h3>
+                            <figure><img src="assets/images/app-mockup" alt="Alttext"></figure>
+                            <p>Deux jeux navigateurs réalisés lors de mon année de LP CM, réalisés avec la bibliothèque CreateJS. Le premier a été fait en TP et l’autre est une création personnelle.</p>
+                            <a href="portfolio/application-hybride-chill-masters" class="button blue">Voir le projet</a>
                         </div>
-
-                        <div class="row align-left">
-                            <div class="s-twelve m-ten l-eight columns">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email">
-                                <span class="red-notice txt-blue txt-mono">Cela ne ressemble pas à une adresse mail.</span>
-                            </div>
+                    </div>
+                    
+                    <div class="s-twelve m-eight l-five columns">
+                        <div class="card">
+                            <h3>Site Yo Agency</h3>
+                            <figure><img src="assets/images/app-mockup" alt="Alttext"></figure>
+                            <p>Intégration du site de la micro agence “Yo Agency”, une équipe de 5 étudiants créée dans le cadre de nos projets tutorés de LP Création Multimédia.</p>
+                            <a href="portfolio/application-hybride-chill-masters" class="button blue">Voir le projet</a>
                         </div>
-
-                        <div class="row">
-                            <div class="s-twelve m-twelve l-twelve columns">
-                                <label for="message">Message...</label>
-                                <textarea id="message" name="message"></textarea>
-                                <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
-                            </div>
+                    </div>
+                    
+                    <div class="s-twelve m-eight l-five columns">
+                        <div class="card">
+                            <h3>Gestion des visiteurs, Immersions digitales</h3>
+                            <figure><img src="assets/images/app-mockup" alt="Alttext"></figure>
+                            <p>Un outil de gestion des visiteurs venus aux Immersions Digitales lors des Portes Ouvertes de l'IUT Tarbes, réalisé dans le cadre de ma deuxième année de DUT MMI.</p>
+                            <a href="portfolio/application-hybride-chill-masters" class="button blue">Voir le projet</a>
                         </div>
-
-                        <div class="row align-left">
-                            <div class="s-twelve m-six l-six columns">
-                                <p class="txt-black">Tous les champs sont obligatoires.</p>
-                                <button class="button blue s-full-width m-full-width l-full-width" type="submit">Envoyer</button>
-                            </div>
+                    </div>
+                    
+                    <div class="s-twelve m-eight l-five columns">
+                        <div class="card">
+                            <h3>TPF Blog</h3>
+                            <figure><img src="assets/images/app-mockup" alt="Alttext"></figure>
+                            <p>Un projet de CMS réalisé en PHP dans le cadre de mon DUT. Le CMS offre les possibilités d'écrire, de modifier des articles ainsi que de choisir les catégorie. Il est également possible  de gérer les rôles des différents utilisateurs.</p>
+                            <a href="portfolio/application-hybride-chill-masters" class="button blue">Voir le projet</a>
                         </div>
-                        
-                    </form>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <div class="row">
+                    <div class="s-twelve m-twelve l-twelve columns">
+                        <h3 class="txt-mono txt-white txt-center">Et bientôt d'autres projets !</h3>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- END PORTFOLIO -->
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <article class="full-height">
+                <div class="row s-full-width m-full-width l-full-width">
+                    <script>
+                        function initMap() {
+
+                            var bvLoc = {
+                                lat: 43.6053855,
+                                lng: 1.4453956
+                            };
+
+                            var mapStyle = [{
+                                "featureType": "administrative",
+                                "elementType": "labels.text.fill",
+                                "stylers": [{
+                                    "color": "#444444"
+                                }]
+                            }, {
+                                "featureType": "landscape",
+                                "stylers": [{
+                                    "color": "#3454d1"
+                                }]
+                            }, {
+                                "featureType": "landscape.man_made",
+                                "stylers": [{
+                                    "color": "#3454d1"
+                                }, {
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "poi",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "road",
+                                "stylers": [{
+                                    "color": "#c9b55d"
+                                }, {
+                                    "saturation": -100
+                                }, {
+                                    "lightness": 45
+                                }, {
+                                    "visibility": "on"
+                                }]
+                            }, {
+                                "featureType": "road",
+                                "elementType": "labels",
+                                "stylers": [{
+                                    "hue": "#ff0000"
+                                }, {
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "road",
+                                "elementType": "labels.icon",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "road",
+                                "elementType": "labels.text",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "road.arterial",
+                                "stylers": [{
+                                    "color": "#c9b55d"
+                                }]
+                            }, {
+                                "featureType": "road.arterial",
+                                "elementType": "labels.icon",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "road.highway",
+                                "stylers": [{
+                                    "color": "#c9b55d"
+                                }, {
+                                    "visibility": "on"
+                                }]
+                            }, {
+                                "featureType": "road.highway",
+                                "elementType": "geometry",
+                                "stylers": [{
+                                    "visibility": "simplified"
+                                }]
+                            }, {
+                                "featureType": "road.highway",
+                                "elementType": "labels",
+                                "stylers": [{
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "road.local",
+                                "stylers": [{
+                                    "color": "#c9b55d"
+                                }]
+                            }, {
+                                "featureType": "transit",
+                                "stylers": [{
+                                    "color": "#f0f757"
+                                }, {
+                                    "visibility": "off"
+                                }]
+                            }, {
+                                "featureType": "water",
+                                "stylers": [{
+                                    "color": "#c5cdff"
+                                }, {
+                                    "visibility": "on"
+                                }]
+                            }];
+
+                            // Create a map object and specify the DOM element for display.
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                center: bvLoc,
+                                scrollwheel: false,
+                                zoom: 14,
+                                styles: mapStyle,
+                                disableDefaultUI: true,
+                                zoomControl: true
+                            });
+
+                        }
+
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm81y4vTlz7G8wttTHkILtce0yKsYKCXY&callback=initMap" async defer></script>
+                    <div id="map"></div>
+                </div>
+                <div class="row p-scroll" data-p-scroll=".2">
+                    <div class="s-twelve m-twelve l-twelve columns txt-center">
+
+                        <h2>Contact</h2>
+                        <p>Restons en contact !</p>
+
+                    </div>
+                </div>
+
+                <div class="row vertical-align">
+                    <div class="s-twelve m-twelve l-five columns informations txt-center p-scroll" data-p-scroll=".35">
+
+                        <h3>Informations</h3>
+
+                        <p id="contact-email">
+                            <i class="fa fa-envelope-o"></i>
+                        </p>
+
+                        <p id="contact-phone">
+                            <i class="fa fa-phone"></i>
+                        </p>
+
+                        <p id="contact-address">
+                            <i class="fa fa-home"></i>
+                            <span id="contact-address-street"></span>
+                            <span id="contact-address-town"></span>
+                            <span id="contact-address-country"></span>
+                        </p>
+
+                    </div>
+
+                    <div class="s-twelve m-twelve l-five columns p-scroll">
+
+                        <h3 class="txt-center">Formulaire</h3>
+
+                        <form action="index.html" method="POST">
+
+                            <div class="row">
+                                <div class="s-six m-six l-six columns columns">
+                                    <label for="firstname">Prénom</label>
+                                    <input type="text" id="firstname" name="firstname" value="Baptiste">
+                                    <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
+                                </div>
+
+                                <div class="s-six m-six l-six columns columns">
+                                    <label for="lastname">Nom</label>
+                                    <input type="text" id="lastname" name="lastname" value="Villemur">
+                                    <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
+                                </div>
+                            </div>
+
+                            <div class="row align-left">
+                                <div class="s-twelve m-ten l-eight columns">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" value="baptistevillemur@live.fr">
+                                    <span class="red-notice txt-blue txt-mono">Cela ne ressemble pas à une adresse mail.</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="s-twelve m-twelve l-twelve columns">
+                                    <label for="message">Message...</label>
+                                    <textarea id="message" name="message">Ceci est un test. & é à â û ï</textarea>
+                                    <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
+                                </div>
+                            </div>
+
+                            <div class="row align-left">
+                                <div class="s-twelve m-six l-six columns">
+                                    <p class="txt-black">Tous les champs sont obligatoires.</p>
+                                    <button class="button blue s-full-width m-full-width l-full-width" type="submit">Envoyer</button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- END CONTACT -->
+
+        <!-- FOOTER -->
+        <footer class="txt-beige bg-black">
+            <div class="row">
+
+                <div class="s-twelve m-four l-four columns txt-left">
+
+                    <h6>Baptiste Villemur, développement web et webdesign. Etudiant en licence professionnelle Création Multimédia.</h6>
 
                 </div>
-            </div>
-        </article>
-    </section>
-    <!-- END CONTACT -->
 
-    <!-- FOOTER -->
-    <footer class="txt-beige">
-        <div class="row">
+                <div class="s-eight m-four l-four columns txt-center">
 
-            <div class="s-four m-four l-four columns txt-left">
+                    <h6><a href="credits.html">Crédits</a></h6>
 
-                <h6>Baptiste Villemur, développement web et webdesign. Etudiant en licence professionnelle Création Multimédia.</h6>
+                </div>
 
-            </div>
+                <div class="s-eight m-four l-four columns s-txt-center m-txt-right l-txt-right">
 
-            <div class="s-four m-four l-four columns txt-center">
+                    <h6>Réseaux sociaux</h6>
 
-                <h6><a href="credits.html">Crédits</a></h6>
+                    <ul class="socials-list">
+                        <li>
+                            <a class="no-after" href="https://www.linkedin.com/in/baptiste-villemur-9b1061118/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a class="no-after" href="https://www.github.com/baptvlmr" target="_blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a class="no-after" href="https://www.codepen.io/baptvlmr" target="_blank"><i class="fa fa-codepen"></i></a>
+                        </li>
+                    </ul>
 
-            </div>
+                </div>
 
-            <div class="s-four m-four l-four columns txt-right">
-                
-                <h6>Réseaux sociaux</h6>    
-            
-                <a class="a-no-after" href="http://www.facebook.fr/baptvlmr" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a class="a-no-after" href="https://www.github.com/baptvlmr" target="_blank"><i class="fa fa-github"></i></a>
-                <a class="a-no-after" href="https://www.codepen.io/baptvlmr" target="_blank"><i class="fa fa-codepen"></i></a>
+                <div class="s-eight m-six l-six columns s-txt-center m-txt-left l-txt-left">
 
-            </div>
+                    <p>&copy; Baptiste Villemur - 2017</p>
 
-            <div class="s-six m-six l-six columns txt-left">
+                </div>
 
-                <p>&copy; Baptiste Villemur - 2017</p>
+                <div class="s-eight m-six l-six columns s-txt-center m-txt-right l-txt-right">
 
-            </div>
+                    <p>From scratch with <i class="fa fa-heart"></i></p>
 
-            <div class="s-six m-six l-six columns txt-right">
-
-                <p>From scratch with <i class="fa fa-heart"></i></p>
+                </div>
 
             </div>
+        </footer>
+        <!-- END FOOTER -->
 
-        </div>
-    </footer>
-    <!-- END FOOTER -->
+    </div>
+    <!-- END CONTENT WRAPPER -->
 
     <!-- SCRIPTS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/tilt.jquery.js"></script>
-    <script src="js/wolf.js"></script>
-    <script src="js/bodymovin.js"></script>
-    <script src="js/anim.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/waypoints.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.parallax.min.js"></script>
+    <script src="assets/js/tilt.jquery.js"></script>
+    <script src="assets/js/wolf.js"></script>
+    <!--<script src="assets/js/bodymovin.js"></script>-->
+    <!--<script src="assets/js/anim.js"></script>-->
+    <!--<script src="assets/js/sweetalert.min.js"></script>-->
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 

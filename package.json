@@ -1,0 +1,30 @@
+{
+  "name": "baptistevillemur",
+  "version": "3.0.0",
+  "description": "Site personnel de Baptiste Villemur, étudiant en développement web.",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baptvlmr/baptiste-villemur.git"
+  },
+  "keywords": [
+    "baptiste",
+    "villemur",
+    "développement",
+    "web",
+    "development"
+  ],
+  "author": "baptvlmr (Baptiste Villemur)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baptvlmr/baptiste-villemur/issues"
+  },
+  "homepage": "https://github.com/baptvlmr/baptiste-villemur#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.0"
+  }
+}
