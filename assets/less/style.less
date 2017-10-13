@@ -251,7 +251,7 @@ footer {
 /* CONTACT */
 
 #contact {
-    & > .full-height {
+    & > article:first-of-type {
         padding-top: 0;
     }
     h3 {
@@ -262,6 +262,13 @@ footer {
         width: 100%;
         margin-bottom: 50px;
     }
+    
+    @media (max-width: 768px) {
+        #map {
+            height: 20vh;
+        }
+    }
+    
     .informations {
         p {
             margin-bottom: 50px;
