@@ -1,3 +1,9 @@
+<?php
+
+//var_dump($_SERVER);
+//die();
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -69,6 +75,29 @@
 -->
 
 <body>
+    
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "<?= $_SERVER['HTTP_REFERER'] ?>#portfolio",
+              "name": "Portfolio"
+            }
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "<?= $_SERVER['HTTP_REFERER'] ?>portfolio/<?= basename($_SERVER["SCRIPT_FILENAME"], '.php'); ?>",
+              "name": "<?= $title ?>",
+              "image": "<?= $_SERVER['HTTP_REFERER'] ?>assets/images/portfolio/<?= $img_name ?>"
+            }
+          }]
+        }
+    </script>
 
     <!-- NAV -->
     <nav id="nav">
@@ -84,7 +113,7 @@
 
     <header id="header">
         <div class="row">
-            <div class="s-twelve m-twelve l-eight columns">
+            <div class="s-twelve m-ten l-ten columns">
                 <p class="back"><a href="/#portfolio"><i class="fa fa-chevron-left"></i> Retour au portfolio</a></p>
 
                 <h2><?= $title ?></h2>

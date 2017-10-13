@@ -5,9 +5,6 @@ $(document)
 
         console.clear();
 
-        console.log('Hello lost web traveler !');
-        console.log('Where do you wanna go ?');
-
         $('a[href="#"]')
             .click(function (e) {
                 e.preventDefault();
@@ -219,10 +216,47 @@ $(document)
             });
     
     $(document).keydown(function(e) {
-        console.log(e.keyCode);
-    })
-
+        var key = e.keyCode;
+        
+        switch(key) {
+            case 96:
+                smoothScroll('#home');
+                break;
+            case 97:
+                smoothScroll('#about');
+                break;
+            case 98:
+                smoothScroll('#skills');
+                break;
+            case 99:
+                smoothScroll('#portfolio');
+                break;
+            case 100:
+                smoothScroll('#contact');
+                break;
+                
+        }
     });
+
+});
+
+function smoothScroll(target) {
+    
+    var speed  = 750;
+
+    var targetTopOffset = Math.round($(target).offset().top)
+
+    if( targetTopOffset != $(document).scrollTop() ) {
+
+        $('html, body').animate({
+
+            scrollTop: targetTopOffset
+
+        }, speed);
+
+    }
+
+}
 
 $.fn.pScroll = function () {
 

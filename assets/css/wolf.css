@@ -105,22 +105,25 @@ figure:hover figcaption {
 
 /* GRID
 ---------------------------------------- */
-.vertical-align {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-}
-
-.vertical-align > * {
-    width: 100%;
-}
-
 .row {
     width: 95%;
     display: flex;
     flex-flow: row wrap;
     margin: 0 auto;
     justify-content: center;
+    align-items: flex-start;
+}
+
+.row.vertical-align {
+    align-items: center;
+}
+
+.row.vertical-align > * {
+    width: 100%;
+}
+
+.row.same-height {
+    align-items: normal;
 }
 
 .row .row, .row.full-width {
@@ -140,11 +143,11 @@ figure:hover figcaption {
     padding: 1%;
 }
 
-/* Small ( width < 425px ) */ 
-@media (max-width: 424px) {
+/* Small ( width < 500px ) */ 
+@media (max-width: 499px) {
     
     .row.s-full-width { width: 100%; }
-    .row.s-reverse { flex-direction: reverse; }
+    .row.s-reverse { flex-direction: row-reverse; }
     
     .s-hide { display: none !important; }
 
@@ -175,11 +178,11 @@ figure:hover figcaption {
     
 }
 
-/* Medium ( 425px <= width < 768px ) */
-@media (min-width: 425px) and (max-width: 767px) {
+/* Medium ( 500px <= width < 768px ) */
+@media (min-width: 500px) and (max-width: 767px) {
     
     .row.m-full-width { width: 100%; }
-    .row.m-reverse { flex-direction: reverse; }
+    .row.m-reverse { flex-direction: row-reverse; }
     
     .m-hide { display: none !important; }
     
@@ -213,7 +216,7 @@ figure:hover figcaption {
 @media (min-width: 768px) {
     
     .row.l-full-width { width: 100%; }
-    .row.l-reverse { flex-direction: reverse; }
+    .row.l-reverse { flex-direction: row-reverse; }
     
     .l-hide { display: none !important; }
     
@@ -281,13 +284,16 @@ p:not(:last-child) {
     margin-bottom: 15px;
 }
 
+p.no-margin {
+    margin-bottom: 0;
+}
+
 a {
     color: inherit;
 }
 
 a[target="_blank"]:not(.no-after):hover:after {
     content: '\00a0↗';
-    transform: rotate(45deg);
 }
 
 em {
@@ -302,14 +308,14 @@ strong {
     text-align: left;
 }
 
-@media (max-width: 424px){
+@media (max-width: 499px){
     .s-txt-left, .s-txt-left * {
         text-align: left;
     }
 }
 
 
-@media (min-width: 425px) and (max-width: 767px){
+@media (min-width: 500px) and (max-width: 767px){
     .m-txt-left, .m-txt-left * {
         text-align: left;
     }
@@ -326,14 +332,14 @@ strong {
     text-align: right;
 }
 
-@media (max-width: 424px){
+@media (max-width: 499px){
     .s-txt-right, .s-txt-right * {
         text-align: right;
     }
 }
 
 
-@media (min-width: 425px) and (max-width: 767px){
+@media (min-width: 500px) and (max-width: 767px){
     .m-txt-right, .m-txt-right * {
         text-align: right;
     }
@@ -350,14 +356,14 @@ strong {
     text-align: center;
 }
 
-@media (max-width: 424px){
+@media (max-width: 499px){
     .s-txt-center, .s-txt-center * {
         text-align: center;
     }
 }
 
 
-@media (min-width: 425px) and (max-width: 767px){
+@media (min-width: 500px) and (max-width: 767px){
     .m-txt-center, .m-txt-center * {
         text-align: center;
     }
@@ -374,14 +380,14 @@ strong {
     text-align: justify;
 }
 
-@media (max-width: 424px){
+@media (max-width: 499px){
     .s-txt-justify, .s-txt-justify * {
         text-align: justify;
     }
 }
 
 
-@media (min-width: 425px) and (max-width: 767px){
+@media (min-width: 500px) and (max-width: 767px){
     .m-txt-justify, .m-txt-justify * {
         text-align: justify;
     }
@@ -404,10 +410,28 @@ strong {
 .txt-blue,  .txt-blue *  { color: #3454D1; }
 .txt-beige, .txt-beige * { color: #c9b55d; }
 
+sup {
+    vertical-align: super;
+    font-size: .6em;
+}
+
+sub {
+    vertical-align: super;
+    font-size: .6em;
+}
+
 
 /* LISTS
 ---------------------------------------- */
+ul.list {
+    list-style-type: disc;
+    margin-bottom: 15px;
+}
 
+ul.list li {
+    margin-left: 35px;
+    line-height: 1.4;
+}
 
 
 
@@ -535,6 +559,11 @@ select:focus {
 .button.blue {
     color: #efefef;
     background: #3454D1;
+}
+
+.button.black {
+    color: #efefef;
+    background: #0C090D;
 }
 
 .button[type="submit"]:hover {
