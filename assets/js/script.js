@@ -215,38 +215,41 @@ $(document)
 
             });
     
-    $(document).keydown(function(e) {
-        var key = e.keyCode;
-        
-        switch(key) {
-            case 96:
-                smoothScroll('#home');
-                break;
-            case 97:
-                smoothScroll('#about');
-                break;
-            case 98:
-                smoothScroll('#skills');
-                break;
-            case 99:
-                smoothScroll('#portfolio');
-                break;
-            case 100:
-                smoothScroll('#contact');
-                break;
-                
-        }
+        $(document).keydown(function (e) {
+            var key = e.keyCode;
+
+            switch (key) {
+                case 96:
+                    smoothScroll('#home');
+                    break;
+                case 97:
+                    smoothScroll('#about');
+                    break;
+                case 98:
+                    smoothScroll('#skills');
+                    break;
+                case 99:
+                    smoothScroll('#portfolio');
+                    break;
+                case 100:
+                    smoothScroll('#contact');
+                    break;
+                    
+                default:
+                    break;
+
+            }
+        });
+
     });
 
-});
-
 function smoothScroll(target) {
-    
-    var speed  = 750;
+
+    var speed = 750;
 
     var targetTopOffset = Math.round($(target).offset().top)
 
-    if( targetTopOffset != $(document).scrollTop() ) {
+    if (targetTopOffset != $(document).scrollTop()) {
 
         $('html, body').animate({
 
