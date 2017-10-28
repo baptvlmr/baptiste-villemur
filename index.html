@@ -8,23 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/bv-logo-icon.png">
 
-    <title>BAPTISTE VILLEMUR</title>
+    <title>BAPTISTE VILLEMUR | Développeur web</title>
 
     <!-- PAGE INFOS -->
     <meta name="author" content="Baptiste Villemur">
-    <meta name="description" content="Site personnel de Baptiste Villemur, étudiant en licence professionnelle Création Multimédia.">
-    <meta name="keywords" content="baptiste villemur, baptiste, villemur, étudiant, etudiant, multimédia, multimedia, lpcm, lp cm, lp, cm, dut mmi, dut, mmi, iut, tarbes, la rochelle, webdesign, developpement, web, infographie">
+    <meta name="description" content="Site personnel de Baptiste Villemur, développeur web. Diplômé d'une licence professionnelle Création Multimédia.">
+    <meta name="keywords" content="baptiste villemur, baptiste, villemur, étudiant, etudiant, multimédia, multimedia, lpcm, lp cm, lp, cm, dut mmi, dut, mmi, iut, tarbes, la rochelle, webdesign, developpement, developpeur, web, toulouse">
     <meta name="robots" content="noindex, nofollow">
 
     <meta name="theme-color" content="#3454d1">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- FACEBOOK -->
-    <meta property="og:title" content="BAPTISTE VILLEMUR">
+    <meta property="og:title" content="BAPTISTE VILLEMUR | Développeur web">
     <meta property="og:site_name" content="Site personnel de Baptiste Villemur">
-    <meta property="og:url" content="http://baptistevillemur.fr">
-    <meta property="og:description" content="Site personnel de Baptiste Villemur, étudiant en licence professionnelle Création Multimédia.">
-    <meta property="og:image" content="http://baptistevillemur/V3/images/bv-logo.png">
+    <meta property="og:url" content="https://baptistevillemur.fr">
+    <meta property="og:description" content="Site personnel de Baptiste Villemur, développeur web. Diplômé d'une licence professionnelle Création Multimédia.">
+    <meta property="og:image" content="https://baptistevillemur.fr/assets/images/bv-logo.png">
     <meta property="og:type" content="website">
 
     <!-- CSS -->
@@ -36,6 +36,16 @@
     <!-- FONTS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono">
+    
+    <!-- ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63559968-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-63559968-1');
+    </script>
 
 </head>
 
@@ -57,10 +67,10 @@
                                            ___             ___
           ___                             /\  \           /\  \
          /\  \                           |::\  \         /::\  \
-         \:\  \                          |:|:\  \       /:/\:\__\
-          \:\  \       ___     ___     __|:|\:\  \     /:/ /:/  /
-      ___  \:\__\     /\  \   /\__\   /::::|_\:\__\   /:/_/:/__/___
-     /\  \ |:|  |     \:\  \ /:/  /   \:\~~\  \/__/   \:\/:::::/  /
+         \:\  \       ___                |:|:\  \       /:/\:\__\
+          \:\  \     /\  \             __|:|\:\  \     /:/ /:/  /
+      ___  \:\__\    \:\  \   ___     /::::|_\:\__\   /:/_/:/__/___
+     /\  \ |:|  |     \:\  \ /\__\    \:\~~\  \/__/   \:\/:::::/  /
      \:\  \|:|  |      \:\  /:/  /     \:\  \          \::/~~/~~~~
       \:\__|:|__|       \:\/:/  /       \:\  \          \:\~~\
        \::::/__/         \::/  /         \:\__\          \:\__\
@@ -69,6 +79,66 @@
 -->
 
 <body>
+    
+    <!-- LOADER -->
+    <script src="assets/js/jquery.min.js"></script>
+    
+    <style>
+        body {
+            overflow: hidden;
+        }
+        #loader {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 99999999;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+        }
+        
+        #loader .fa.fa-spinner {
+            margin-right: 10px;
+            animation: loaderSpinner 1s infinite linear;
+        }
+        
+        @keyframes loaderSpinner {
+            from {
+                transform: rotate(0deg)
+            }
+            
+            to {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    
+    <div id="loader" class="bg-white">
+        <div class="row vertical-align">
+            <div class="s-four m-four l-four columns">
+               <figure><img src="assets/images/bv-logo.svg" alt="Logo Baptiste Villemur"></figure>                
+            </div>
+            <div class="s-twelve m-twelve l-twelve columns txt-center">
+                <p><i class="fa fa-spinner"></i>Chargement en cours...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(window).load(function() {
+            
+            $('body').css('overflow', 'auto');
+            if (localStorage.getItem('wasVisited') !== undefined) {
+                $("#loader").remove();
+            } else {
+                localStorage.setItem('wasVisited', 1);
+                $('#loader').fadeOut(400);
+            }
+        })
+    </script>    
+    <!-- END LOADER -->
 
     <!-- NAV -->
     <nav id="nav">
@@ -86,14 +156,14 @@
         </div>
 
         <div class="bar row s-full-width m-full-width l-full-width fixed vertical-align">
-            <div class="s-two m-four l-eight columns">
+            <div class="s-two m-two l-two columns">
                 <figure>
                     <a href="#home">
                         <img src="assets/images/bv-logo.svg" alt="Logo">
                     </a>
                 </figure>
             </div>
-            <div class="s-ten m-eight l-four columns">
+            <div class="s-ten m-ten l-ten columns">
                 <p class="txt-right txt-black">
                     <a class="menu-toggle" href="#">Menu <i class="fa fa-bars"></i></a>
                 </p>
@@ -129,8 +199,7 @@
                     </div>
                     <div class="row">
                         <div class="s-twelve m-twelve l-twelve columns txt-center txt-mono txt-white">
-                            <h2 class="txt-mono">Etudiant développement web & webdesign</h2>
-                            <h3 class="txt-mono">Licence Professionnelle Création Multimédia</h3>
+                            <h2 class="txt-mono">Développeur web</h2>
                             <h4 class="txt-mono">Toulouse, France</h4>
                             <p><a href="#about"><i class="fa fa-angle-down"></i></a></p>
                         </div>
@@ -148,9 +217,9 @@
 
                         <h2>Présentation</h2>
 
-                        <p>Je m'appelle <em>Baptiste Villemur</em>, je suis étudiant en <em><a href="http://sciences.univ-larochelle.fr/lp-creation-multimedia" target="_blank">licence professionnelle Création Multimédia</a></em>, à l’<em>Université de la Rochelle</em>.</p>
+                        <p>Je m'appelle <em>Baptiste Villemur</em>, je suis un développeur web diplômé d'une <em><a href="http://sciences.univ-larochelle.fr/lp-creation-multimedia" target="_blank">licence professionnelle Création Multimédia</a></em> (effectuée à l'<em>Université de la Rochelle</em>) depuis septembre 2017.</p>
 
-                        <p>Après un <em>bac scientifique</em> j'ai décidé d'intégrer une formation multimédia, un <em><a href="http://www.iut-tarbes.fr/DUT-Metiers-du-Multimedia-et-de-l" target="_blank"><abbr title="Diplôme Universitaire Technologique">DUT</abbr> <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr></a></em> à l'<em>IUT de Tarbes</em>, qui pourrait m'apporter des connaissances très larges dans des domaines qui m'intéressent comme l'audiovisuel, l'infographie ou internet.</p>
+                        <p>Après un <em>bac scientifique</em> j'ai décidé d'intégrer une formation multimédia, un <em><a href="http://www.iut-tarbes.fr/DUT-Metiers-du-Multimedia-et-de-l" target="_blank"><abbr title="Diplôme Universitaire Technologique">DUT</abbr> <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr></a></em> à l'<em>IUT de Tarbes</em>, qui m'a apporté des connaissances très larges dans des domaines qui m'intéressent comme l'audiovisuel, l'infographie ou internet.</p>
 
                         <p>C'est grâce à cette formation que j'ai découvert le <em>webdesign</em> et le <em>développement web</em> qui sont des domaines qui m'intéressent de plus en plus et vers lesquels j'aimerais m'orienter professionnellement.</p>
 
@@ -161,7 +230,7 @@
                     <div class="s-ten m-six l-four columns p-scroll" data-p-scroll=".2">
                         <figure class="shadow tilt">
                             <img src="assets/images/bapt-blue.jpg" alt="Baptiste Villemur">
-                            <figcaption class="bg-blue txt-mono txt-white">Il m'arrive également de sourire.</figcaption>
+                            <figcaption class="bg-blue"><p class="txt-center">✌️</p></figcaption>
                         </figure>
                     </div>
                 </div>
@@ -352,7 +421,7 @@
                         <h3>Informations</h3>
 
                         <p id="contact-email">
-                            <i class="fa fa-envelope-o"></i>
+                            <i class="fa fa-envelope"></i>
                         </p>
 
                         <p id="contact-phone">
@@ -377,13 +446,13 @@
                             <div class="row">
                                 <div class="s-six m-six l-six columns columns">
                                     <label for="firstname">Prénom</label>
-                                    <input type="text" id="firstname" name="firstname" value="Baptiste">
+                                    <input type="text" id="firstname" name="firstname">
                                     <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
                                 </div>
 
                                 <div class="s-six m-six l-six columns columns">
                                     <label for="lastname">Nom</label>
-                                    <input type="text" id="lastname" name="lastname" value="Villemur">
+                                    <input type="text" id="lastname" name="lastname">
                                     <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
                                 </div>
                             </div>
@@ -391,7 +460,7 @@
                             <div class="row align-left">
                                 <div class="s-twelve m-ten l-eight columns">
                                     <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" value="baptistevillemur@live.fr">
+                                    <input type="email" id="email" name="email">
                                     <span class="red-notice txt-blue txt-mono">Cela ne ressemble pas à une adresse mail.</span>
                                 </div>
                             </div>
@@ -399,7 +468,7 @@
                             <div class="row">
                                 <div class="s-twelve m-twelve l-twelve columns">
                                     <label for="message">Message...</label>
-                                    <textarea id="message" name="message">Ceci est un test. & é à â û ï</textarea>
+                                    <textarea id="message" name="message"></textarea>
                                     <span class="red-notice txt-blue txt-mono">Ce champ ne peut pas être vide.</span>
                                 </div>
                             </div>
@@ -471,14 +540,15 @@
 
     </div>
     <!-- END CONTENT WRAPPER -->
+    
 
     <!-- SCRIPTS -->
-    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.parallax.min.js"></script>
     <script src="assets/js/tilt.jquery.js"></script>
     <script src="assets/js/wolf.js"></script>
     <script src="assets/js/waypoints.js"></script>
     <script src="assets/js/script.js"></script>
+    <!-- END SCRIPTS -->
 
 </body>
 

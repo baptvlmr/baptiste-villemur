@@ -14,8 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/assets/images/bv-logo-icon.png">
 
-    <title>
-        <?= $title ?> &ndash; BAPTISTE VILLEMUR</title>
+    <title><?= $title ?> &ndash; BAPTISTE VILLEMUR</title>
 
     <!-- PAGE INFOS -->
     <meta name="author" content="Baptiste Villemur">
@@ -42,6 +41,16 @@
     <!-- FONTS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono">
+    
+    <!-- ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63559968-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-63559968-1');
+    </script>
 
 </head>
 
@@ -63,10 +72,10 @@
                                            ___             ___
           ___                             /\  \           /\  \
          /\  \                           |::\  \         /::\  \
-         \:\  \                          |:|:\  \       /:/\:\__\
-          \:\  \       ___     ___     __|:|\:\  \     /:/ /:/  /
-      ___  \:\__\     /\  \   /\__\   /::::|_\:\__\   /:/_/:/__/___
-     /\  \ |:|  |     \:\  \ /:/  /   \:\~~\  \/__/   \:\/:::::/  /
+         \:\  \       ___                |:|:\  \       /:/\:\__\
+          \:\  \     /\  \             __|:|\:\  \     /:/ /:/  /
+      ___  \:\__\    \:\  \   ___     /::::|_\:\__\   /:/_/:/__/___
+     /\  \ |:|  |     \:\  \ /\__\    \:\~~\  \/__/   \:\/:::::/  /
      \:\  \|:|  |      \:\  /:/  /     \:\  \          \::/~~/~~~~
       \:\__|:|__|       \:\/:/  /       \:\  \          \:\~~\
        \::::/__/         \::/  /         \:\__\          \:\__\

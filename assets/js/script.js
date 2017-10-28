@@ -3,7 +3,7 @@ i = 0;
 $(document)
     .ready(function () {
 
-        console.clear();
+//        console.clear();
 
         $('a[href="#"]')
             .click(function (e) {
@@ -154,7 +154,7 @@ $(document)
                     email.length != 0 && message.length > 1 && isEmail) {
 
                     var post = $.ajax({
-                        url: 'https://v3.baptistevillemur.fr/form.php',
+                        url: '//baptistevillemur.fr/form.php',
                         type: 'post',
                         data: {
                             firstname: firstname,
@@ -166,6 +166,8 @@ $(document)
                     });
 
                     post.done(function (data) {
+                        
+                        console.log(data);
 
                         notif('Votre email a bien été envoyé.', 'success');
                         form.find('input, textarea')
@@ -182,8 +184,7 @@ $(document)
                     });
 
                     post.always(function () {
-
-
+                        console.log('mes couilles');
                     });
 
                 } else {
@@ -215,7 +216,7 @@ $(document)
 
             });
     
-        $(document).keydown(function (e) {
+        /*$(document).keydown(function (e) {
             var key = e.keyCode;
 
             switch (key) {
@@ -239,7 +240,7 @@ $(document)
                     break;
 
             }
-        });
+        });*/
 
     });
 
@@ -373,7 +374,7 @@ function notif(msg, status, delay = 2000) {
         $(notif)
             .remove();
 
-    }, 3000);
+    }, delay + 500);
 
 }
 
